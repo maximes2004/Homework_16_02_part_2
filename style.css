@@ -5,19 +5,32 @@
 
 body {
     font-family: Gilroy-Bold;
+}
+
+header,
+.section_1>div,
+.section_2>div {
     width: 1170px;
     margin-right: auto;
     margin-left: auto;
 }
 
 header {
-    height: 100px;
-    width: 100%;
+    min-height: 100px;
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1169.5px) {
+    header,
+    .section_1>div,
+    .section_2>div {
+        width: 100%;
+    }
 }
 
 .logo {
@@ -28,9 +41,11 @@ header {
 .menu_container {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 32px;
     font-size: 14px;
     font-family: Gilroy-Medium;
+    flex-wrap: wrap;
 }
 
 .menu_container div:first-child {
@@ -38,13 +53,14 @@ header {
     font-weight: bold;
 }
 
-.text_office {
+.section_1>div:first-child {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 20px;
     padding-bottom: 160px;
     padding-top: 40px;
+    flex-wrap: wrap;
 }
 
 .text_ai {
@@ -57,18 +73,46 @@ header {
     margin-bottom: 20px;
 }
 
-.text_ai h6 {
+.text_ai h1 span {
+    border: 1px solid #f25822;
+    border-radius: 100%;
+}
+
+.text_ai h2 {
+    margin-bottom: 20px;
+}
+
+.section_1 h6 {
     font-size: 20px;
     color: #888888;
     line-height: 23.44px;
     font-family: Gilroy-Medium;
     font-weight: 200;
     width: 466px;
-    margin-bottom: 36px;
+    margin-bottom: 37px;
 }
 
 .img_office {
     width: 610px;
+}
+
+.button_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background-color: #F25822;
+    font-size: 12px;
+    color: #FFFFFF;
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 4px 4px 8px 0 #F2582233;
 }
 
 .btn_first {
@@ -88,6 +132,16 @@ header {
     color: #AAAAAA;
     background-color: inherit;
     border: none;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     gap: 15px;
+     flex-wrap: nowrap;
+}
+
+.btn_second::before {
+    display: block;
+    content: url(img/icon_play.svg);
 }
 
 .logo_group {
@@ -95,5 +149,34 @@ header {
     flex-direction: row;
     justify-content: space-between;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 96px;
+    flex-wrap: wrap;
+}
+
+.section_2 {
+    background-image: url(img/background_section2_lines.svg), url(img/background_section2.png);
+    width: 100%;
+}
+
+.section_2>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-top: 127px;
+    flex-wrap: wrap;
+}
+
+.section_2 h2 {
+    font-size: 45px;
+    line-height: 52.7px;
+}
+
+.section_2 h6 {
+    font-size: 16px;
+    line-height: 24px;
+    color: #666666;
+    font-family: Gilroy-Regular;
+    margin-bottom: 35px;
+    font-weight: 200;
 }
